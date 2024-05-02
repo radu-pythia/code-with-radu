@@ -1,27 +1,31 @@
 
 def fibonacci_pana_la(numar):
-    array = [0,1]
+    array = [1,1]
     numar_plus_1 = numar + 1 # Because number not included in range limit.
-    for x in range(1, numar_plus_1):
-            doi = 2
-            suma_ultimelor_doua_din_array = sum(array[-doi:])
-            print(suma_ultimelor_doua_din_array)
-            array.append(suma_ultimelor_doua_din_array)
+    print("1")
+    for x in range(2, numar):
+        if numar == 1:
+            break
+        doi = 2
+        suma_ultimelor_doua_din_array = sum(array[-doi:])
+        # suma_ultimelor_doua_din_array = array[x-1]+array[x-2]
+        
+        print(suma_ultimelor_doua_din_array)
+        array.append(suma_ultimelor_doua_din_array)
+            
+  
 
 def fibonacci_pentru(numar):
-    array = [0,1]
-    numar_plus_1 = numar + 1 # Because number not included in range limit.
-    for x in range(1, numar_plus_1):
+
+    array = [1,1]
+    for x in range(2, numar):
             doi = 2
-            suma_ultimelor_doua_din_array = sum(array[-doi:])
-            if x == numar:
-                  print(suma_ultimelor_doua_din_array)
-                  break
-            
+            suma_ultimelor_doua_din_array = sum(array[-doi:]) 
             array.append(suma_ultimelor_doua_din_array)
+    print(suma_ultimelor_doua_din_array)
 
 
-print("Fibonacci pana la numarul zece:")
-fibonacci_pana_la(12)
-print("Fibonacci pentru numarul cinci:")
-fibonacci_pentru(5)
+print("Fibonacci pana la numarul 200:")
+fibonacci_pana_la(10)
+print("Fibonacci pentru numarul 100:")
+fibonacci_pentru(10)
